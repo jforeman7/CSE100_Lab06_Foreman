@@ -1,4 +1,4 @@
-Jeff Foreman 
+Jeff Foreman \n
 CSE 100 03L
 25 Oct 2017
 
