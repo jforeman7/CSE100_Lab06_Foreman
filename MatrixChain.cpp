@@ -9,7 +9,7 @@
 using namespace std;
 
 // Pseudocode found on page 377.
-void PrintOptimalParens(int s[], int i, int j)
+void PrintOptimalParens(int s[][], int i, int j)
 {
 	// Print out the name of the Matrix.
 	if (i == j)
@@ -21,8 +21,8 @@ void PrintOptimalParens(int s[], int i, int j)
 	// Place the parenthesis.
 	cout << "(";
 
-	PrintOptimalParens(s, i, s[i,j]);
-	PrintOptimalParens(s, s[i,j] + 1, j);
+	PrintOptimalParens(s, i, s[i][j]);
+	PrintOptimalParens(s, s[i][j] + 1, j);
 
 	cout << ")";
 } // End function.
