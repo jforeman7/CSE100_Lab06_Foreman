@@ -21,8 +21,8 @@ void PrintOptimalParens(int *s, int i, int j)
 	// Place the parenthesis.
 	cout << "(";
 
-	PrintOptimalParens(s, i, s[i][j]);
-	PrintOptimalParens(s, s[i][j] + 1, j);
+	PrintOptimalParens((int *)s, i, s[i][j]);
+	PrintOptimalParens((int *)s, s[i][j] + 1, j);
 
 	cout << ")";
 } // End function.
@@ -71,7 +71,7 @@ void MatrixChainOrder(int p[], int n)
 	cout << m[1][n - 1] << endl;
 	
 	// Print out the optimal chain multiplication.
-	PrintOptimalParens(&s, 1, n - 1);
+	PrintOptimalParens((int *)s, 1, n - 1);
 	cout << endl;
 	
 } // End function.
