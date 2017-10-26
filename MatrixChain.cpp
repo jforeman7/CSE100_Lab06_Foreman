@@ -9,7 +9,7 @@
 using namespace std;
 
 // Pseudocode found on page 377.
-void PrintOptimalParens(int s[][], int i, int j)
+void PrintOptimalParens(int **s, int i, int j)
 {
 	// Print out the name of the Matrix.
 	if (i == j)
