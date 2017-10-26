@@ -19,15 +19,12 @@ void PrintOptimalParens(int i, int j, int bracket, int *name)
 	}
 	
 	// Place the parenthesis.
-	else
-	{
-		cout << "(";
-		
-		PrintOptimalParens(i, *((name + i * bracket) + j), bracket, name);
-		PrintOptimalParens(*((name + i * bracket) + j), j, bracket, name);
-		
-		cout << ")";
-	}
+	cout << "(";
+
+	PrintOptimalParens(i, *((name + i * bracket) + j), bracket, name);
+	PrintOptimalParens(*((name + i * bracket) + j), j, bracket, name);
+
+	cout << ")";
 } // End function.
 
 // Pseudocode found on page 375.
