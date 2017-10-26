@@ -9,7 +9,7 @@
 using namespace std;
 
 // Pseudocode found on page 377.
-void PrintOptimalParens(int *s, int i, int j)
+void PrintOptimalParens(int *s, int i, int j, int n)
 {
 	// Print out the name of the Matrix.
 	if (i == j)
@@ -21,8 +21,8 @@ void PrintOptimalParens(int *s, int i, int j)
 	// Place the parenthesis.
 	cout << "(";
 
-	PrintOptimalParens((int *)s, i, s[i][j]);
-	PrintOptimalParens((int *)s, s[i][j] + 1, j);
+	PrintOptimalParens((int *)s, i, *((s + i * n) + j, n);
+	PrintOptimalParens((int *)s, *(s + i * n) + j + 1, j, n);
 
 	cout << ")";
 } // End function.
@@ -71,7 +71,7 @@ void MatrixChainOrder(int p[], int n)
 	cout << m[1][n - 1] << endl;
 	
 	// Print out the optimal chain multiplication.
-	PrintOptimalParens((int *)s, 1, n - 1);
+	PrintOptimalParens((int *)s, 1, n - 1, n);
 	cout << endl;
 	
 } // End function.
