@@ -23,10 +23,8 @@ void PrintOptimalParens(int i, int j, int bracket, int *name)
 	{
 		cout << "(";
 		
-		int jp = name + i * bracket + j;
-		
-		PrintOptimalParens(i, *jp, bracket, name);
-		PrintOptimalParens(*jp + 1, j, bracket, name);
+		PrintOptimalParens(i, *((name + i * bracket) + j), bracket, name);
+		PrintOptimalParens(*((name + i * bracket) + j), j, bracket, name);
 		
 		cout << ")";
 	}
