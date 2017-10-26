@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int n;
+const int n;
 
 // Pseudocode found on page 377.
 void PrintOptimalParens(int s[n][n], int i, int j)
