@@ -9,7 +9,7 @@
 using namespace std;
 
 // Pseudocode found on page 377.
-void PrintOptimalParens(int* s, int i, int j)
+void PrintOptimalParens(int s[], int i, int j)
 {
 	// Print out the name of the Matrix.
 	if (i == j)
@@ -70,9 +70,8 @@ void MatrixChainOrder(int p[], int n)
 	// Print out the result.
 	cout << m[1][n - 1] << endl;
 	
-	n--;
 	// Print out the optimal chain multiplication.
-	PrintOptimalParens(s, 1, n);
+	PrintOptimalParens(s, 1, n - 1);
 	cout << endl;
 	
 } // End function.
