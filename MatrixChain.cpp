@@ -22,7 +22,7 @@ void PrintOptimalParens(int i, int j, int bracket, int *name)
 	cout << "(";
 
 	PrintOptimalParens(i, *((name + i * bracket) + j), bracket, name);
-	PrintOptimalParens(*((name + i * bracket) + j), j, bracket, name);
+	PrintOptimalParens(*((name + i * bracket) + j) + 1, j, bracket, name);
 
 	cout << ")";
 } // End function.
@@ -71,7 +71,7 @@ void MatrixChainOrder(int p[], int n)
 	cout << m[1][n - 1] << endl;
 	
 	// Print out the optimal chain multiplication.
-	PrintOptimalParens(1, n-1, n, (int *) s);
+	PrintOptimalParens(1, n - 1, n, (int *) s);
 	cout << endl;
 	
 } // End function.
@@ -83,7 +83,7 @@ int main()
 	cin >> n;
 	
 	// Instantiate the array.
-	int *A = new int[n + 1];
+	int *A = new int[n];
 	
 	// Input into the array.
 	for (int i = 0; i <= n; i++)
