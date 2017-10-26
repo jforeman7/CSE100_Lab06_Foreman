@@ -28,3 +28,9 @@ void PrintOptimalParens(int i, int j, int bracket, int *name)
 		cout << ")";
 	}
 }
+
+// Pseudocode found on page 375.
+void MatrixChainOrder(int p[], int pSize)
+{
+		
+}
