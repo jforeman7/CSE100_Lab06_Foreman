@@ -86,14 +86,14 @@ int main()
 	cin >> n;
 	
 	// Instantiate the array.
-	int *A = new int[n];
+	int *A = new int[n + 1];
 	
 	// Input into the array.
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i <= n; i++)
 		cin >> A[i];
 	
 	// Begin the Matrix Chain Multiplication.
-	MatrixChainOrder(A, n);
+	MatrixChainOrder(A, n + 1);
 	
 	return 0;
 }
