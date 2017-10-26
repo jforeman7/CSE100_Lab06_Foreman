@@ -2,3 +2,5 @@
 // CSE 100 03L
 // Lab 06: Matrix Chain Multiplication
 // 25 Oct 2017
+
+#include <iostream>
