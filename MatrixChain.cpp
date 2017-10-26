@@ -74,7 +74,7 @@ void MatrixChainOrder(int p[], int n)
 	cout << m[1][n - 1] << endl;
 	
 	// Print out the optimal chain multiplication.
-	PrintOptimalParens(1, n-1, n, int *s);
+	PrintOptimalParens(1, n-1, n, (int *) s);
 	cout << endl;
 	
 } // End function.
