@@ -8,8 +8,10 @@
 
 using namespace std;
 
+int n;
+
 // Pseudocode found on page 377.
-void PrintOptimalParens(int **s, int i, int j)
+void PrintOptimalParens(int s[n][n], int i, int j)
 {
 	// Print out the name of the Matrix.
 	if (i == j)
@@ -28,7 +30,7 @@ void PrintOptimalParens(int **s, int i, int j)
 } // End function.
 
 // Pseudocode found on page 375.
-void MatrixChainOrder(int p[], int n)
+void MatrixChainOrder(int p[])
 {
 	// Allocate memory for the two dimensional matrix arrays.
 	int m[n][n];
@@ -79,7 +81,6 @@ void MatrixChainOrder(int p[], int n)
 int main()
 {
 	// Get the size of the array.
-	int n;
 	cin >> n;
 	
 	// Instantiate the array.
@@ -88,9 +89,10 @@ int main()
 	// Input into the array.
 	for (int i = 0; i <= n; i++)
 		cin >> A[i];
+	n++;
 	
 	// Begin the Matrix Chain Multiplication.
-	MatrixChainOrder(A, n + 1);
+	MatrixChainOrder(A);
 	
 	return 0;
 }
