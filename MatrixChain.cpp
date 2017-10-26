@@ -31,7 +31,7 @@ void PrintOptimalParens(int i, int j, int bracket, int *name)
 } // End function.
 
 // Pseudocode found on page 375.
-void MatrixChainOrder(int p[], int pSize)
+void MatrixChainOrder(int p[], int n)
 {
 	// Allocate memory for the two dimensional matrix arrays.
 	int m[n][n];
