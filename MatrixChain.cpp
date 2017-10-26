@@ -21,8 +21,8 @@ void PrintOptimalParens(int *s, int i, int j, int n)
 	// Place the parenthesis.
 	cout << "(";
 
-	PrintOptimalParens((int *)s, i, *((s + i * n) + j, n);
-	PrintOptimalParens((int *)s, *(s + i * n) + j + 1, j, n);
+	PrintOptimalParens((int *)s, i, *((s + i * n) + j), n);
+	PrintOptimalParens((int *)s, *(s + i * n) + j) + 1, j, n);
 
 	cout << ")";
 } // End function.
