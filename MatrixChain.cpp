@@ -86,11 +86,11 @@ int main()
 	int *A = new int[n];
 	
 	// Input into the array.
-	for (int i = 0; i <= n; i++)
+	for (int i = 0; i < n; i++)
 		cin >> A[i];
 	
 	// Begin the Matrix Chain Multiplication.
-	MatrixChainOrder(A, n + 1);
+	MatrixChainOrder(A, n);
 	
 	return 0;
 }
